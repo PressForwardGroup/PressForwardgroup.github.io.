@@ -48,3 +48,13 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;color:var(--muted);f
 footer h3{font-size:16px;color:var(--ink);margin-bottom:10px}footer a{display:block;text-decoration:none;padding:3px 0}footer a:hover{color:var(--ink)}
 @media(max-width:760px){.two{grid-template-columns:1fr}section{padding:48px 0}.hero{padding:48px 0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.menu{display:none;background:transparent;border:1px solid var(--line);border-radius:6px;width:46px;height:42px;padding:0;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.menu span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px}
+.nav nav a.mo{display:none}
+.sub{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+@media(max-width:760px){
+.menu{display:flex}
+.nav nav{display:none;position:absolute;top:62px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:6px 22px 18px;overflow:visible;white-space:normal}
+.nav nav.open{display:flex}
+.nav nav a,.nav nav a.mo{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-size:18px}
+.nav nav a.btn{text-align:center;margin-top:14px;border:1px solid var(--blue);padding:14px}}
