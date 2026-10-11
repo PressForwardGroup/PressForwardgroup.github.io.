@@ -16,3 +16,11 @@ b.setAttribute("aria-label",t==="light"?"Switch to dark mode":"Switch to light m
 apply(get()==="light"?"light":"dark");
 b.addEventListener("click",function(){var t=r.getAttribute("data-theme")==="light"?"dark":"light";apply(t);save(t)});
 if(w)w.appendChild(b)})();
+(function(){
+var a=document.createElement("a");a.className="wa-float";a.href="https://wa.me/254115694343?text=Hello%20PressForward%20Tech%20Hub";a.target="_blank";a.rel="noopener";a.setAttribute("aria-label","Chat on WhatsApp");
+a.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.5-4.5A8 8 0 1 1 8.5 18.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .7a4 4 0 0 1-1.7-1.7l.7-1-1-2z" fill="#fff" stroke="none"/></svg>';
+document.body.appendChild(a);
+if(!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll(".card,.steps>div,.proof>div,.two>*,.ph1 h1").forEach(function(el){if(el.getBoundingClientRect().top<innerHeight)return;el.classList.add("reveal");io.observe(el)});
+})();
